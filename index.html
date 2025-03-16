@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنجازات اعضاء كروب ⭐ بطولات ⭐ 🏆</title>
+    <style>
+        /* التصميم العام */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* خط أنيق */
+            background-color: #ffffff; /* لون خلفية أبيض */
+            margin: 0;
+            padding: 0;
+            text-align: right; /* المحاذاة العامة للنص */
+        }
+
+        header {
+            background-color: #ffffff; /* لون خلفية أبيض */
+            padding: 20px 0;
+            text-align: center; /* العنوان في المنتصف */
+            border-bottom: 1px solid #e0e0e0; /* خط فاصل */
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.8em;
+            color: #333; /* لون نص داكن */
+            font-weight: bold; /* خط أكثر سماكة */
+        }
+
+        .achievements {
+            margin: 20px 0;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* البطاقات في المنتصف */
+        }
+
+        .achievement-card {
+            background-color: #ffffff; /* لون خلفية أبيض */
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px 0;
+            padding: 15px;
+            width: 90%; /* عرض البطاقة */
+            max-width: 300px; /* أقصى عرض للبطاقة */
+            display: flex;
+            align-items: center;
+            gap: 10px; /* مسافة بين الصورة والاسم */
+            transition: transform 0.3s ease;
+            cursor: pointer; /* تغيير المؤشر إلى يد */
+        }
+
+        .achievement-card:hover {
+            transform: scale(1.02);
+        }
+
+        .achievement-card img {
+            border-radius: 50%;
+            width: 50px; /* صورة أصغر */
+            height: 50px; /* صورة أصغر */
+            object-fit: cover;
+            border: 2px solid #e0e0e0; /* لون إطار فاتح */
+        }
+
+        .achievement-card h2 {
+            margin: 0;
+            font-size: 1.1em; /* خط أصغر */
+            color: #333; /* لون نص داكن */
+            text-align: right; /* محاذاة النص لليمين */
+            font-weight: 500; /* خط متوسط السماكة */
+        }
+
+        /* نافذة التفاصيل المنبثقة */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 80%;
+            max-width: 400px;
+            text-align: right;
+        }
+
+        .popup h3 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+            color: #333; /* لون نص داكن */
+        }
+
+        .popup p {
+            margin: 0;
+            font-size: 1em;
+            color: #555; /* لون نص رمادي */
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            cursor: pointer; /* تغيير المؤشر إلى يد */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>إنجازات اعضاء كروب ⭐ بطولات ⭐ 🏆</h1>
+    </header>
+
+    <main>
+        <section class="achievements">
+            <!-- الشخص الأول -->
+            <div class="achievement-card" onclick="showDetails('حمزة محمود', 'بطولة تحدي المعلومات وبطولة اجمل ملف شخصي')">
+                <img src="https://scontent.fisu10-2.fna.fbcdn.net/v/t1.15752-9/483494877_1583339332372633_2502574305566588488_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=Q1_XY-6ZULUQ7kNvgH-g7H5&_nc_oc=AdjMH8bwCQ5JdTpqt3eA89fhewCOLM1GWLlV7Gl3srTPk2UMSggv7saH2GGTOJx88Cc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fisu10-2.fna&oh=03_Q7cD1wEXKDmuJ8pEuH73utz7LO7aVIXB8zZotmAKG93rRDoZng&oe=67FCE7B8" alt="صورة الشخص 1">
+                <h2>حمزة محمود 🏆2</h2>
+            </div>
+
+            <!-- الشخص الثاني -->
+            <div class="achievement-card" onclick="showDetails('KHALID', 'بطولة اجمل ملف شخصي')">
+                <img src="https://scontent.fisu10-2.fna.fbcdn.net/v/t1.15752-9/483162165_617732684402651_8517886872841721441_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=0024fc&_nc_ohc=IPTsqJlLwwQQ7kNvgG-AvkO&_nc_oc=Adjo9BQxgggxSAIcx37T11kyU7KuXgQ_z-UyOdMsSWw5quDZ-uBMlX7pSxXgUdQ1oM8&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fisu10-2.fna&oh=03_Q7cD1wE_5E4spwdb-Ib9FbCsgT5zokl0RxNXCQsAW4KTRchfHQ&oe=67FCBD92" alt="صورة الشخص 2">
+                <h2>🏆ᯓ『 KHALID 』¹⁵ 1</h2>
+            </div>
+
+            <!-- الشخص السادس -->
+            <div class="achievement-card" onclick="showDetails('الشخص السادس', 'بطولة جديدة')">
+                <img src="https://scontent.fisu10-2.fna.fbcdn.net/v/t1.15752-9/483313830_632462282734181_723750259166190607_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=102&ccb=1-7&_nc_sid=0024fc&_nc_ohc=zOUo4ndUMh4Q7kNvgHZ5k13&_nc_oc=AdhPNFvT4U8ur6k6TLovPcnWP2MimGvx4QMWMwn3-7yiEAnEgOQ351jlaDWQMkZpBuc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fisu10-2.fna&oh=03_Q7cD1wE5woOhEWQjLb4uR_sPRPkZLsaKVwuShHVbBu0oL_uvSg&oe=67FDD7A2" alt="صورة الشخص 6">
+                <h2>محمد فهد 🏆1</h2>
+            </div>
+
+            <!-- الشخص الثالث -->
+            <div class="achievement-card" onclick="showDetails('زياد البياتي', 'بطولة الاسئلة')">
+                <img src="https://scontent.fisu10-2.fna.fbcdn.net/v/t1.15752-9/483336414_1190516325801760_5895513643055003290_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=w-r26rFAeT0Q7kNvgF_BkqL&_nc_oc=Adg0Md2LVvOUkibJ-X_4zLGAsPy67jKK3q0f4qJFNAxFdHyEEj0TGIoyYqnYW8MNJOI&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fisu10-2.fna&oh=03_Q7cD1wHPvo_XjE0jzldMvb_CWqLW5ZLEpJU4Z13RzyR7ESRCIg&oe=67FCC6AD" alt="صورة الشخص 3">
+                <h2>زياد البياتي 🏆1</h2>
+            </div>
+
+            <!-- الشخص الرابع -->
+            <div class="achievement-card" onclick="showDetails('اياد البياتي', 'بطولة ببجي موبيال')">
+                <img src="https://scontent.fisu10-2.fna.fbcdn.net/v/t1.15752-9/483009525_642748198347193_1003251964338294277_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=103&ccb=1-7&_nc_sid=0024fc&_nc_ohc=EHBNRBFJ6VEQ7kNvgF3GS4M&_nc_oc=AdhqJ3KflUlVl2khAr-Y5lFa41wmCsyXriMbaaV9uLmvardXg9HX_WQRkCAO2GEk2-0&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fisu10-2.fna&oh=03_Q7cD1wH3fkwF7KYDtC5Fq6Z7LtapOVP3JiHTtCEBSSVDSdwcvQ&oe=67FCE662" alt="صورة الشخص 4">
+                <h2>اياد البياتي 🏆1</h2>
+            </div>
+
+            <!-- الشخص الخامس -->
+            <div class="achievement-card" onclick="showDetails('علاء الجنابي', 'بطولة الايموجي')">
+                <img src="https://scontent.fisu10-2.fna.fbcdn.net/v/t1.15752-9/484035303_679248074773083_7608307005171823066_n.jpg?stp=dst-jpg_s480x480_tt6&_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=fiV4cII7HB8Q7kNvgFqs0MI&_nc_oc=AdjfV75PfQvoMaNPdkNZosIDG8vjvs9AtpRUrxCax2vuIXQslGfczDTt--1tI_lPPCs&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fisu10-2.fna&oh=03_Q7cD1wG40iud-ifaFFOQhVMDVGsofeAOQdhBofcwCA-JS6nvrg&oe=67FCD41D" alt="صورة الشخص 5">
+                <h2>علاء الجنابي 🏆1</h2>
+            </div>
+        </section>
+    </main>
+
+    <!-- نافذة التفاصيل المنبثقة -->
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+    <div class="popup" id="popup">
+        <h3 id="popup-title"></h3>
+        <p id="popup-description"></p>
+    </div>
+
+    <script>
+        // دالة لعرض التفاصيل
+        function showDetails(name, description) {
+            document.getElementById('popup-title').innerText = name;
+            document.getElementById('popup-description').innerText = `البطولة: ${description}`;
+            document.getElementById('popup').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        // دالة لإغلاق النافذة المنبثقة
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
